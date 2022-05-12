@@ -19,4 +19,16 @@ describe("Test for ExplorerService class",()=>{
         const explorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
         expect(explorersInNode).toStrictEqual(["ajolonauta1"]);
     });  
+
+    test ("For getExplorersByStack function",()=>{
+        const explorers = [{stacks: [
+            "javascript",
+            "elixir",
+            "groovy",
+            "reasonML",
+            "elm"] 
+        }];
+        const explorersInNode = ExplorerService.getExplorersByStack(explorers, "javascript");
+        expect(explorersInNode.length).toBe(1);
+    });  
 });

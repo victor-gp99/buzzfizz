@@ -7,9 +7,13 @@ const explorers = Reader.readJsonFile("explorers.json");
 
 // Aplicación del ExplorerService sobre la lista de explorers
 console.log(ExplorerService.filterByMission(explorers, "node"));
+console.log("---------------------------");
 console.log(ExplorerService.getAmountOfExplorersByMission(explorers, "node"));
+console.log("---------------------------");
 console.log(ExplorerService.getExplorersUsernamesByMission(explorers, "node"));
-
+console.log("---------------------------");
+console.log(ExplorerService.getExplorersByStack(explorers, "javascript"));
+console.log("---------------------------");
 const explorer1 = {name: "Explorer1", score: 1};
 console.log(FizzbuzzService.applyValidationInExplorer(explorer1));// {name: "Explorer1", score: 1, trick: 1} 
 
