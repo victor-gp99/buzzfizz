@@ -27,7 +27,14 @@ describe("Test for ExplorerService class",()=>{
             "groovy",
             "reasonML",
             "elm"] 
-        }];
+        },
+        {stacks: [
+            "elixir",
+            "groovy",
+            "reasonML",
+            "elm"] 
+        }
+        ];
         const explorersInNode = ExplorerService.getExplorersByStack(explorers, "javascript");
         expect(explorersInNode.length).toBe(1);
     });  
